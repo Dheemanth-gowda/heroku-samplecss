@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #3f406c;
+}
+
+.navbar--container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: end;
+  background-color: #52557e;
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar--logo {
+  width: 50px;
+  cursor: pointer;
+  margin: 10px 0;
+  margin-left: 5px;
+}
+
+nav {
+  margin-right: 0;
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+/* !! */
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 15 auto;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+  .item-1 {
+    grid-column: 1 / span 2;
+  }
+  .item-10 {
+    grid-column: 3 / span 2;
+  }
+  .navbar--container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .navbar--container {
+    flex-direction: column;
+  }
+}
+/* !! */
+
+.cards--container {
+  background: #5b5d8d;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+}
+.cards--container p {
+  flex: 1; /* make p grow to fill available space*/
+  line-height: 1.4;
+}
+.cards--container:hover {
+  top: -5px;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cards--container card--images {
+  flex-grow: 1;
+}
+.cards--container cards--contents {
+  flex-grow: 4;
+}
+.cards--container img {
+  width: 100%;
+}
+.cards--contents {
+  margin: 0px 5px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.cards--contents h6 {
+  padding: 10px;
+  max-width: 500px;
+}
+
+.cards--contents p {
+  padding: 10px;
+  max-width: 500px;
+  font-family: "Abel", sans-serif;
+  font-size: 13px;
+}
+.cards--contents h2 {
+  padding: 10px;
+  max-width: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.cards--information {
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+  display: flex;
+  flex-direction: row;
+}
+
+.cards--autor {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.cards--information p {
+  margin-left: 5px;
+}
+
+.cards--time {
+  display: flex;
+  align-items: center;
+}
